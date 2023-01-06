@@ -1,0 +1,94 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel6">Editar tu Perfil</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+    </div>
+    <div class="modal-body letra">
+      <form [formGroup]="form" (ngSubmit)="onUpdate()" novalidate ><!-- #f="ngForm"-->
+        <div class="form-floating">
+          <input type="text" class="form-control border mb-2" id="nombre" placeholder="nombre" formControlName="nombre"  [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}"><!--[(ngModel)]="perso.nombre"-->
+          <label for="nombre" class="form-label">Nombre</label>
+          <p *ngIf="Nombre.hasError('required')" class="text-danger">
+            El nombre es requerido.
+          </p>
+          <p *ngIf="Nombre.errors" class="text-danger">
+            El nombre debe ser valido.
+          </p>
+
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control border mb-2" id="apellido" placeholder="apellido" formControlName="apellido"  [ngClass]="{'is-invalid': Apellido.errors && Apellido.touched, 'is-valid': !Apellido.errors && Apellido.touched}"><!--[(ngModel)]="perso.apellido"-->
+          <label for="apellido" class="form-label">Apellido</label>
+          <p *ngIf="Apellido.hasError('required')" class="text-danger">
+            El apellido es requerido.
+          </p>
+          <p *ngIf="Apellido.errors" class="text-danger">
+            El apellido debe ser valido.
+          </p>
+
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control border" id="profesion" placeholder="profesion" formControlName="profesion"  [ngClass]="{'is-invalid': Profesion.errors && Profesion.touched, 'is-valid': !Profesion.errors && Profesion.touched}"><!--[(ngModel)]="perso.profesion"-->
+          <label for="floatingName" class="form-label">Titulo</label>
+          <p *ngIf="Profesion.hasError('required')" class="text-danger">
+            El texto de titulo es requerido.
+          </p>
+          <p *ngIf="Profesion.errors" class="text-danger">
+            El titulo de usuario debe ser valido.
+          </p>
+
+        </div>
+        <!--
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"></label>
+          <textarea class="form-control border" id="exampleFormControlTextarea12" rows="3" placeholder="Virtud" ></textarea>
+        </div>-->
+
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+  </div>
+</div>
+</div>
+</div>
+
+ <!--  <form [formGroup]="form"   modal name="perfilForm" class="">(ngSubmit)="onEnviar($event)"
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel4">Editar su Perfil</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" routerLink="/">X</button>
+      </div>
+      <div class="modal-body letra">
+        <input type="hidden" formControlName="id" >
+       <form [formGroup]="form"  name="perfilForm" class="">--><!--(ngSubmit)="onEnviar($event)"
+          <input type="hidden" formControlName="id" >
+          <div class="form-floating">
+            <label for="nombrePerfil" class="form-label" class="text-danger">Nombre</label>
+            <input type="text" class="form-control border mb-2" id="nombrePerfil" placeholder="nombre" formControlName="nombre" >
+
+          </div>
+          <div class="form-floating">
+            <label for="apellidoPerfil" class="form-label" class="text-danger">Apellido</label>
+            <input type="text" class="form-control border mb-2" id="apellidoPerfil" placeholder="apellido" formControlName="apellido" >
+
+          </div>
+          <div class="form-floating">
+            <label for="profesionPerfil" class="form-label" class="text-danger">Profesion</label>
+            <input type="text" class="form-control border" id="profesionPerfil" placeholder="titulo" formControlName="profesion" >
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+
+      </div>
+    </div>
+  </form>
+  </div>
+</div>-->

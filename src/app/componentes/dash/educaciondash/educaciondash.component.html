@@ -1,0 +1,106 @@
+<div *ngFor="let educa of mieducacion" class="row mt-3">
+  <!--<div class="col-sm-12 col-md-8 justify-content-end">-->
+
+  <div class="col-4 pos_izq ps-4 pt-5">
+
+      <div>
+          <img src="{{ educa.logo }}" class="tam_imag" alt="..." title="Logo Argentina Programa">
+      </div>
+      <p></p>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+
+      <figure class="mt-4 text-end">
+          <blockquote class="blockquote">
+              <h2>{{ educa.universidad }}</h2>
+              <h4>{{ educa.institucion }}</h4>
+              <h5>{{ educa. titulo }}</h5>
+
+          </blockquote>
+          <figcaption class="blockquote-footer">
+              <cite class="figcap" title="Source Title">{{ educa.estado }}</cite>
+          </figcaption>
+      </figure>
+
+
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-auto text-center">
+      <button type="button" (click)="actualizarVariable(educa)" data-bs-toggle="modal" data-bs-target="#exampleModal10" class="btn btn-close-white" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
+      <button type="submit" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(educa.id)"></i></button>
+        <!--<ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+
+                    <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon" type="button" (click)="actualizarVariable(educacion)" data-bs-toggle="modal" data-bs-target="#exampleModal10"></i>
+
+
+            </li>
+            <li class="list-group-item">
+
+                    <i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3" type="button" data-bs-toggle="modal" (click)="delete(educa.id)"></i>
+
+            </li>
+        </ul>-->
+    </div>
+  </div>
+  <hr class="ps-5 w-75">
+</div>
+<app-modaldashedicioneduc [editarEducacion] = "educacion"></app-modaldashedicioneduc>
+<!--<app-modaldashborrareduc></app-modaldashborrareduc>-->
+<!--
+<div class="row mt-3">
+
+  <div class="col-4 pos_izq ps-4 pt-5">
+
+      <div>
+          <img src="assets/image/Logo_UTN_av.png" class="tam_imag" alt="..." title="Logo UTN Avellaneda">
+      </div>
+      <p></p>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+
+      <figure class="mt-4 text-end">
+          <blockquote class="blockquote">
+              <h2>Universidad Tecnologica Nacional</h2>
+              <h4>Facultad Regional Avellaneda</h4>
+              <h5>Ingenieria Electronica</h5>
+
+          </blockquote>
+          <figcaption class="blockquote-footer">
+              <cite class="figcap" title="Source Title">Se adeudan finales</cite>
+          </figcaption>
+      </figure>
+      <hr>
+
+  </div>
+</div>
+<div class="row mt-3">
+
+  <div class="col-4 pos_izq ps-4 pt-5">
+
+      <div>
+          <img src="assets/image/Logo_ENET_N3_Salvador_Debenedetti.png" class="tam_imag1" alt="..." title="Logo NETlNs5Salvador Debenedetti">
+      </div>
+      <p></p>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+
+      <figure class="mt-4 text-end">
+          <blockquote class="blockquote">
+              <h2>ENET N° 3 Salvador Debenedetti</h2>
+              <h4>Avellaneda</h4>
+              <h5>Tecnico Electronico</h5>
+
+          </blockquote>
+          <figcaption class="blockquote-footer">
+              <cite class="figcap" title="Source Title"></cite>
+          </figcaption>
+      </figure>
+  </div>
+</div>-->

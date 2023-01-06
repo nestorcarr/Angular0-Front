@@ -1,0 +1,56 @@
+<div *ngFor="let persona of personas" class="row mt-3">
+  <div class="col-4 pos_izq ps-4 pt-3">
+      <h2>{{ persona.nombre }} {{ persona.apellido }}</h2>
+      <h5>{{ persona.profesion }}</h5>
+        <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-start icon3 icon4 mt-4" type="button" (click)="actualizarVariable(persona)" data-bs-toggle="modal" data-bs-target="#exampleModal4"></i> <!--routerLink="editPerfl/{{persona.id}}"-->
+  </div>
+  <!--*ngIf="isLogged"-->
+  <!--<div class="col-2">-->
+      <!--<a href="#" title=".">-->
+      <!--<i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end icon3 icon2 mt-5" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal4"></i>-->
+      <!--</a>-->
+  <!--</div>-->
+
+  <div class="col-md-12 col-lg-6 justify-content-md-end" >
+      <figure class="mt-4 text-end">
+          <blockquote class="blockquote">
+              <p>{{ persona.acerca_de_mi }}</p>
+              <p>{{ persona.acercademi }}</p>
+
+          </blockquote>
+          <figcaption class="blockquote-footer">
+              Someone famous in <cite class="figcap" title="Source Title">Source Title</cite>
+          </figcaption>
+      </figure>
+  </div>
+  <div class="col-md-12 col-lg-1 p-0 d-flex item-alling-end">
+    <button type="button" (click)="actualizarVariable(persona)" data-bs-toggle="modal" data-bs-target="#exampleModal6" class="btn btn-close-white mx-auto"><i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 icon"></i></button><!--routerLink="editPerfl/{{persona.id}}"-->
+    <!--*ngIf="isLogged"-->
+    <!--<button type="submit" class="btn btn-close-white" (click)="delete(persona.id)"><i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3 icon"></i></button>-->
+  </div>
+</div>
+<app-modaleditardash [editarPersona] = "persona"></app-modaleditardash>
+<app-modaldashedicionpers [editarPersona] = "persona">></app-modaldashedicionpers>
+<!--<app-modaldashborrrarpers></app-modaldashborrrarpers>-->
+
+      <!--<li class="list-group-item">
+              <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal6"></i>
+
+          </li>
+          <li class="list-group-item">
+             <i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal7"></i>
+
+          </li>-->
+
+         <!--                                           -->
+
+        <!--<li class="list-group-item">
+
+            <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal6"></i>
+
+          </li>
+          <li class="list-group-item">
+
+            <i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal7"></i>
+
+          </li>-->

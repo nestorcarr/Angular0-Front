@@ -1,0 +1,61 @@
+<!-- Modal -->
+<div class="modal fade letra" id="exampleModal60" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel60" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()">X</button>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="personaForm">
+              <div class="modal-body letra">
+                      <div class="">
+                        <label for="floatingPassword2" class="form-label"></label>
+                        <input type="text" formControlName="nombre" class="form-control border mb-2" id="floatingPassword2" aria-describedby="nombreHelp" placeholder="nombre" [(ngModel)]="nombre" [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid': !Nombre?.errors && Nombre?.touched}">
+                        <div *ngIf="Nombre?.errors && Nombre?.touched">
+                          <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+                            El nombre es requerido
+                          </p>
+                        </div>
+                        
+                      </div>
+
+                      <div class="">
+                        <label for="floatingPassword22" class="form-label"></label>
+                        <input type="text" formControlName="apellido" class="form-control border mb-2" id="floatingPassword22" aria-describedby="apellidoHelp" placeholder="apellido" [(ngModel)]="apellido" [ngClass]="{'is-invalid': Apellido?.errors && Apellido?.touched, 'is-valid': !Apellido?.errors && Apellido?.touched}">
+                        <div *ngIf="Apellido?.errors && Apellido?.touched">
+                          <p *ngIf="Apellido?.hasError('required')" class="text-danger">
+                            El apellido es requerido
+                          </p>
+                      </div>
+                      </div>
+                      <div class="">
+                        <label for="floatingPassword222" class="form-label"></label>
+                        <input type="text" formControlName="titulo" class="form-control border" id="floatingPassword222" aria-describedby="tituloHelp" placeholder="titulo" [(ngModel)]="titulo" [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
+                        <div *ngIf="Titulo?.errors && Titulo?.touched">
+                          <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+                            El titulo es requerido
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea12" class="form-label"></label>
+                        <textarea class="form-control border" formControlName="acerca_de_mi" aria-describedby="acerca_de_miHelp" id="exampleFormControlTextarea12" rows="3" placeholder="Virtud" [(ngModel)]="acerca_de_mi" [ngClass]="{'is-invalid': Acerca_de_mi?.errors && Acerca_de_mi?.touched, 'is-valid': !Acerca_de_mi?.errors && Acerca_de_mi?.touched}"></textarea>
+                        <div *ngIf="Acerca_de_mi?.errors && Acerca_de_mi?.touched">
+                          <p *ngIf="Acerca_de_mi?.hasError('required')" class="text-danger">
+                            La virtud es requerida 
+                          </p>
+                        </div>
+                      </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="limpiar()"> Cancelar</button>
+                      <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+              </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

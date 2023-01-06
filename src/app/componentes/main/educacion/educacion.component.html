@@ -1,0 +1,32 @@
+<section>
+  <div id="educacion" class="about1">
+      <div class="container-fluid border rounded-3">
+        <h2>{{ mieducacions }}</h2>
+          <br>
+          <div *ngFor="let educa of mieducacion" class="row mt-4">
+              <div class="col-4 pos_izq mt-1 blockquote1">
+                  <div>
+                      <img [src]="educa.logoinstitucion" class="tam_imag" alt="..." title="Logo Argentina Programa">
+                     <!--<img src="{{ educa.logoinstitucion }}" class="tam_imag" alt="..." title="Logo Argentina Programa">-->
+                  </div>
+              </div>
+              <div class="col-1">
+              </div>
+              <div class="col-7 col-md-6" >
+                  <figure class="mt-4 text-end">
+                      <blockquote class="blockquote blockquote1">
+                          <h3>{{ educa.universidad }}</h3>
+                          <h4>{{ educa.institucion }}</h4>
+                          <h5>{{ educa.titulo }}</h5>
+                      </blockquote>
+                      <figcaption class="blockquote-footer">
+                          <cite title="Source Title">{{ educa.estado }}</cite>
+                      </figcaption>
+                  </figure>
+              </div>
+              <hr class="ps-5 w-75">
+          </div>
+          <br>
+        </div>
+    </div>
+</section>

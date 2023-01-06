@@ -1,0 +1,51 @@
+<div class="modal fade" id="exampleModal400" tabindex="-1" aria-labelledby="exampleModalLabel400" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel400">Nueva habilidad</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()">X</button>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)"  name="habilidadesForm">
+        <div class="modal-body letra">
+          <div class="form-floating">
+            <input type="text" formControlName="habilidad" class="form-control border py-3 mb-2" id="habilidad" placeholder="Habilidad" [(ngModel)]="habilidad" [ngClass]="{'is-invalid': Habilidad?.errors && Habilidad?.touched, 'is-valid': !Habilidad?.errors && Habilidad?.touched}">
+            <label for="habilidad" class="form-label">Habilidad</label>
+              <div *ngIf="Habilidad?.errors && Habilidad?.touched">
+                <p *ngIf="Habilidad?.hasError('required')" class="text-danger">
+                  La habilidad es requerida
+                </p>
+              </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" formControlName="porcentaje" class="form-control border py-3 mb-2" id="porcentaje"  placeholder="Agregar Porcentaje"  [ngClass]="{'is-invalid': Porcentaje?.errors && Porcentaje?.touched, 'is-valid': !Porcentaje?.errors && Porcentaje?.touched}"><!--[(ngModel)]="porcentaje"-->
+            <label for="porcentaje" class="form-label">Agregar Porcentaje</label>
+            <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">
+              <p *ngIf="Porcentaje?.hasError('required')" class="text-danger">
+                El porcentaje es requerido.
+              </p>
+              <p *ngIf="Porcentaje?.hasError('min')" class="text-danger">
+                La porcentaje minimo es 0.
+              </p>
+              <p *ngIf="Porcentaje?.hasError('max')" class="text-danger">
+                La porcentaje maximo es 100.
+              </p>
+            </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" formControlName="color" class="form-control border py-3 mb-2" id="habilidadColor" placeholder="Agregar Color" [(ngModel)]="color" [ngClass]="{'is-invalid': Color?.errors && Color?.touched, 'is-valid': !Color?.errors && Color?.touched}">
+            <label for="habilidadColor" class="form-label">Agregar Color</label>
+            <div *ngIf="Color?.errors && Color?.touched">
+              <p *ngIf="Color?.hasError('required')" class="text-danger">
+                La color es requerido.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="limpiar()">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

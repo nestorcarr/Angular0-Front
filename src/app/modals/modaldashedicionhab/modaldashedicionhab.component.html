@@ -1,0 +1,50 @@
+<div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel12" aria-hidden="true" *ngIf="habi">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel12">Modifique Habilidades</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" >X</button>
+        </div>
+        <div class="modal-body letra">
+          <form [formGroup]="form" (ngSubmit)="onUpdate()" novalidate>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="habilidad" placeholder="Habilidad" formControlName="habilidad" [(ngModel)]="habi.habilidad" [ngClass]="{'is-invalid': Habilidad.errors && Habilidad.touched, 'is-valid': !Habilidad.errors && Habilidad.touched}">
+              <label for="habilidad" class="form-label">Habilidad</label>
+              <p *ngIf="Habilidad.hasError('required')" class="text-danger">
+                La habilidad es requerida.
+              </p>
+              <p *ngIf="Habilidad.errors" class="text-danger">
+                La habilidad debe ser valida.
+              </p>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="porcentaje" placeholder="Porcentaje Adquirido" formControlName="porcentaje" [(ngModel)]="habi.porcentaje" [ngClass]="{'is-invalid': Porcentaje.errors && Porcentaje.touched, 'is-valid': !Porcentaje.errors && Porcentaje.touched}">
+              <label for="porcentaje" class="form-label">Porcentaje Adquirido</label>
+              <p *ngIf="Porcentaje.hasError('required')" class="text-danger">
+                El porcentaje es requerido.
+              </p>
+              <p *ngIf="Porcentaje.errors" class="text-danger">
+                El porcentaje debe ser valido.
+              </p>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="color" placeholder="Color a mostrar" formControlName="color" [(ngModel)]="habi.color" [ngClass]="{'is-invalid': Color.errors && Color.touched, 'is-valid': !Color.errors && Color.touched}">
+              <label for="color" class="form-label">Color a mostrar</label>
+              <p *ngIf="Color.hasError('required')" class="text-danger">
+                El color es requerido.
+              </p>
+              <p *ngIf="Color.errors" class="text-danger">
+                El color debe ser valido.
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+

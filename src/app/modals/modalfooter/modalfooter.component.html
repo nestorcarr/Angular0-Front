@@ -1,0 +1,73 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal55" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel55" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Escribeme</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><!--&times;-->x</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                    <div class="form-floating mb-2">
+                        <input type="email" formControlName="email" [class.border-success]="MailValid" [class.border-danger]="MailInvalid" class="form-control" id="email" aria-describedby="emailHelp" placeholder="name@example.com">
+                        <label for="email" class="form-label">Email</label>
+                      </div>
+                      <div id="emailHelp55" class="form-text mb-2">Nunca compartiremos tu correo electrónico con nadie.</div>
+                        <!--Gracias al getter que configuramos en el controlador-->
+                <div *ngIf="Mail?.errors && Mail?.touched">
+                  <p *ngIf="Mail?.hasError('required')" class="error">
+                    El mail es requerido.
+                  </p>
+                  <p *ngIf="Mail?.hasError('email')" class="error">
+                    El mail debe ser valido.
+                  </p>
+                </div>
+                      <div class="form-floating">
+                        <input type="name" class="form-control border" id="floatingName" placeholder="nombre y apellido">
+                        <label for="floatingName">Nombre y Apellido</label>
+                      </div>
+                              <!--Gracias al getter que configuramos en el controlador-->
+                <!--<div *ngIf="Name?.errors && Name?.touched">
+                  <p *ngIf="Name?.hasError('required')" class="error">
+                    El nombre y apellido es requerido.
+                  </p>
+                  <p *ngIf="Name?.hasError('name')" class="error">
+                    El nombre debe ser valido.
+                  </p>
+                </div>-->
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"></label>
+                        <textarea class="form-control border" id="exampleFormControlTextarea1" rows="3" placeholder="Comentario" ></textarea>
+                      </div>
+                        <!--Gracias al getter que configuramos en el controlador-->
+                      <!--<div *ngIf="Comentario?.errors && Comentario?.touched">
+                        <p *ngIf="Comentario?.hasError('required')" class="error">
+                          El comentario es requerido.
+                        </p>
+                      </div>-->
+
+                    <div class="card cards text-center mt-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Nestor Carretino</h5>
+                          <p class="card-text">carretinonestor@gmail.com</p>
+                          <p class="card-text">+5491123198095</p>
+                          <p class="card-text">Buenos Aires - Argentina</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                  </div>
+                </form>
+                 <!--Esto muestra el mail y el password debajo, luego borrar-->
+            <!--<div>
+              <p><strong>{{ form.value.email }}</strong></p>
+            </div>-->
+              </div>
+        </div>
+    </div>
+  </div>
+

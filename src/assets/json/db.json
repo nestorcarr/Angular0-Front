@@ -1,0 +1,163 @@
+        {
+            "logoargentinaprograma": "assets/image/APLogo-20-20.png",
+            "nombre": "Nestor Alfredo",
+            "apellido": "Carretino",
+            "profesion": "Full Stack Developer Jr",
+            "imageprincipal": "assets/image/gato.jpg",
+            "encabezado": "Acerca de mi",
+            "acerca_de_mi": "Hola soy Nestor de Banfield provincia de Buenos Aires, en busqueda de nuevos desafios.",
+            "acercademi": "Dispongo de muchos años de experiencia en gestión de compras en los rubros manufactureros y seguridad electrónica, como además en el sector de almacenes, logística y expedición. Gran conocimiento de la legislatura nacional. Persona habituada en gestionar contratos y supervisar compras a gran escala. Dinámico, metódico y enérgico en la consecución de los objetivos marcados. Buenas dotes comunicativas y excelente habilidades como negociador y gestión de ahorros.",
+            "carouselimag": "assets/image/22.jpeg",
+            "carouselimage": "assets/image/66.jpeg",
+            "carouselimagen": "assets/image/33.jpeg",
+            "datospersonales": "Datos Personales",
+            "habilidadess": "Hard & Soft Skills",
+            "educacions": "Educacion",
+            "proyectoss": "Proyectos",
+            "experiencialaboral": [
+                {
+                    "id": 1,
+                    "empresa": "Prosegur S.A. - Xiden S.A.",
+                    "logoempresa":"assets/image/prosegur-logo.png",
+                    "cargo": "Jefe de Compras / Jefe de Almacenes y Logística",
+                    "inicio": "2007",
+                    "final": "2018",
+                    "tareas": "Xiden S.A. hasta unificación con Prosegur S.A., me desempeñaba como comprador Sr, llegando luego a Jefe de Compras. Negociación sobre condiciones y tiempos de pago con proveedores. Búsqueda, comparación, evaluación y elección de proveedores. Gestión de existencias y control de pedidos recibidos. Responsable de compra de componentes y repuestos de fabricación a escala. Luego de la unificación de empresas tome el cargo de Jefe de Almacenes y Logística de las empresas de Tecnología (XIDEN S.A., PROSEGUR TECNOLOGIA, GENERAL INDUSTRIES Y TELLEX). Ingreso de Órdenes de compra, generación de etiquetas de productos. Control de artículos ABC. Generación de Máximos y Mínimos. Despacho a clientes. Realización de inventarios total en forma semestral y ABC mensualmente. Auditorías internas y Externas (KPMG), dando siempre ratios mínimos o nulos. Coordinación de pedidos con proveedores. Control de calidad de mercancías recibidas. Contratación de fletes y seguros. Tareas administrativas departamento de compras. Reclamo por artículos defectuosos a proveedores."
+                },
+                {
+                    "id": 2,
+                    "empresa": "Macrodent S.A.",
+                    "logoempresa":"assets/image/logo Macreodent S.A..png",
+                    "cargo": "Jefe de Compras",
+                    "inicio": "2002",
+                    "final": "2007",
+                    "tareas": "Desarrollo e implementación de objetivos y planes. Programación de compras nacionales e internacionales, solicitud y análisis de cotizaciones, evaluación de proveedores, evaluación de laboratorios, control de stock mínimos vs planificación de producción, recepción de mercadería en tiempo y forma, cumplimiento en sistema de gestión. Revisión del plan de compras al fin del periodo programado. Compras productivas y no productivas: máquinas, dispositivos y repuestos ( lectura y comprensión de planos), packaging, desarrollo del diseño del arte de los productos, insumos, etc.. En la gestión se logro reducir los costos principalmente en lo que respecta al packaging en referencia al envasado y etiquetado, encontrando proveedores alternativos sin descuidar la calidad de los mismos. Calidad y procedimientos I.S.O. 9001:2000 y Certificación CE. Otras responsabilidades: Intendencia, Mantenimiento edilicio, seguimiento de contratistas, Comedor. Presentación de Proyectos a organismos."
+                },
+                {
+                    "id": 3,
+                    "empresa": "Telecentro S.A",
+                    "logoempresa":"assets/image/Telecentro-logo.jpg",
+                    "cargo": "Jefe de Instalaciones ",
+                    "inicio": "1999",
+                    "final": "2001",
+                    "tareas": "Coordinador de Capital Federal. El plantel constaba  de 80 personas de las cuales 68 eran técnicos y 12 administrativos. Normas de Calidad y procedimientos."
+                },
+                {
+                    "id": 4,
+                    "empresa": "Multicanal S.A.",
+                    "logoempresa": "assets/image/logo de Multicanal.png",
+                    "cargo": "Jefe Técnico",
+                    "inicio": "1987",
+                    "final": "1998",
+                    "tareas": "Coordinador de los Partidos de Avellaneda, Lanus, Quilmes, Berazategui, Lomas de Zamora, Esteban Echeverría, Ezeiza, Almirante Brown, Presidente Perón y San Vicente. El plantel constaba de 300 personas de las cuales 250 eran técnicos y 50 administrativos. Red, service, instalaciones, desconexiones, diseño, auditoria Gral. C.C.T.V. Fibra óptica. Normas de Calidad y procedimientos. "
+                },
+                {
+                    "id": 5,
+                    "empresa": "Cablevisión S.A.",
+                    "logoempresa": "assets/image/Logo CV.jpg",
+                    "cargo": "Técnico",
+                    "inicio": "1985",
+                    "final": "1987",
+                    "tareas": "Técnico de red y construcciones."
+                }
+            ],
+            "laboral": "Experiencia Laboral",
+            "educacion": [
+                {
+                    "id": 1,
+                    "universidad": "Argentina Programa",
+                    "logoinstitucion": "assets/image/APLogo-20-22.png",
+                    "titulo": "Full Stack Development Jr",
+                    "institucion": "Yo Programo",
+                    "estado": "Actualmente en curso"
+                },
+                {
+                    "id": 2,
+                    "universidad": "Universidad Tecnologica Nacional",
+                    "logoinstitucion": "assets/image/Logo_UTN_av.png",
+                    "titulo": "Ingenieria Electronica",
+                    "institucion": "Facultad Regional Avellaneda",
+                    "estado": "Actualmente en curso"
+                },
+                {
+                    "id": 3,
+                    "universidad": "Escuela Nacional de Educación Tecnica N° 3",
+                    "logoinstitucion": "assets/image/Logo_ENET_N3_Salvador_Debenedetti.png",
+                    "titulo": "Tecnico Electronico",
+                    "institucion": "Salvador Debenedetti - Avellaneda",
+                    "estado": "Egresado"
+                }
+            ],
+            "habilidades": [
+                {
+                    "id": 1,
+                    "habilidad": "Scrum",
+                    "porcentaje":"75",
+                    "color": "#62ec5e"
+                },
+                {
+                    "id": 2,
+                    "habilidad": "GitHub",
+                    "porcentaje":"50",
+                    "color": "#aa5a0e"
+                },
+                {
+                    "id": 3,
+                    "habilidad": "HTML",
+                    "porcentaje":"60",
+                    "color": "#81151e"
+                },
+                {
+                    "id": 4,
+                    "habilidad": "CSS",
+                    "porcentaje":"55",
+                    "color": "#0c0a69"
+                },
+                {
+                    "id": 5,
+                    "habilidad": "Bootstrap",
+                    "porcentaje":"45",
+                    "color": "#46bbb1"
+                },
+                {
+                    "id": 6,
+                    "habilidad": "Typescript",
+                    "porcentaje":"70",
+                    "color": "#f30707"
+                }
+            ],
+            "idioma": "Ingles",
+            "lectura": "Escrito",
+            "conversacion": "Oral",
+            "porcentajelec": "60",
+            "porcentajeconver": "30",
+            "proyectos": [
+            {
+                "id": 1,
+                "institucion": "Argentina Programa",
+                "proyect": "Proyecto Integrador",
+                "profesion": "Full Stack Developer Jr",
+                "logoproyecto": "assets/image/APLogo-20-22.png",
+                "tema": "El objetivo es comenzar con el maquetado web de nuestro proyecto integrador.",
+                "temauno": "Sera nuestro Potfolio estatico. Confeccion del index y el dashboard, con el correspondiente login sugerido por Argentina Programa.",
+                "anio": "2022 - 2023",
+                "estado": "Actualmente en curso"
+            }
+          ],
+            "contactame": [
+            {
+                "nombreyapelidos": "Nestor Carretino",
+                "mail": "carretinonestor@gmail.com",
+                "telefono": "+5491123198095",
+                "ciudadpais": "Buenos Aires - Argentina"
+            }
+          ],
+          "enlacewhatsapp": "https://api.whatsapp.com/send?phone=5491123198095",
+          "confeccion": "© 2022 Portfolio Personal.",
+          "derecho": "Derecho reservado Nestor Carretino",
+          "nopagina": "PAGINA NO ENCONTRADA",
+          "disculpas": "Disculpas, la página buscada no se encuentra. El enlace ya no existe o puede estar roto.",
+          "intentar": "Intentelo más tarde o dirijase a la página de inicio.",
+          "imgerror": "https://media.tenor.com/GAv-RKfyShwAAAAj/sem%C3%A1foro-red.gif"
+        }
+

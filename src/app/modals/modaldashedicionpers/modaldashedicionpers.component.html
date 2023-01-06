@@ -1,0 +1,76 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel6" aria-hidden="true" *ngIf="perso">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel6">Modifique su Historia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" >X</button>
+        </div>
+        <div class="modal-body letra">
+          <form [formGroup]="form" (ngSubmit)="onUpdate()" novalidate> <!-- #f="ngForm"-->
+           <!--<div class="form-floating">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control border mb-2" id="nombre" placeholder="nombre" formControlName="nombre" [(ngModel)]="perso.nombre" [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}">
+              <p *ngIf="Nombre.hasError('required')" class="text-danger">
+                El texto de nombre es requerido.
+              </p>
+              <p *ngIf="Nombre.errors" class="text-danger">
+                El nombre de usuario debe ser valido.
+              </p>
+
+            </div>
+            <div class="form-floating">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control border mb-2" id="apellido" placeholder="apellido" formControlName="apellido" [(ngModel)]="perso.apellido" [ngClass]="{'is-invalid': Apellido.errors && Apellido.touched, 'is-valid': !Apellido.errors && Apellido.touched}">
+              <p *ngIf="Apellido.hasError('required')" class="text-danger">
+                El texto de apellido es requerido.
+              </p>
+              <p *ngIf="Apellido.errors" class="text-danger">
+                El apellido de usuario debe ser valido.
+              </p>
+
+            </div>
+            <div class="form-floating">
+              <label for="floatingName" class="form-label">Titulo</label>
+              <input type="text" class="form-control border" id="profesion" placeholder="profesion" formControlName="profesion" [(ngModel)]="perso.profesion" [ngClass]="{'is-invalid': Profesion.errors && Profesion.touched, 'is-valid': !Profesion.errors && Profesion.touched}">
+              <p *ngIf="Profesion.hasError('required')" class="text-danger">
+                El texto de titulo es requerido.
+              </p>
+              <p *ngIf="Profesion.errors" class="text-danger">
+                El titulo de usuario debe ser valido.
+              </p>
+
+            </div>-->
+
+            <div class="form-floating mb-3">
+              <textarea class="form-control border" id="acerca_de_mi" rows="5" placeholder="Virtud" formControlName="acerca_de_mi"  [ngClass]="{'is-invalid': Acerca_de_mi.errors && Acerca_de_mi.touched, 'is-valid': !Acerca_de_mi.errors && Acerca_de_mi.touched}"><!--[(ngModel)]="perso.acerca_de_mi"-->
+                <label for="exampleFormControlTextarea1" class="form-label">Primer Texto</label>
+                <p *ngIf="Acerca_de_mi.hasError('required')" class="text-danger">
+                  El texto es requerido.
+                </p>
+                <p *ngIf="Acerca_de_mi.errors" class="text-danger">
+                  El texto debe ser valido.
+                </p>
+              </textarea>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control border" id="acercademi" rows="5" placeholder="Virtud1" formControlName="acercademi" [ngClass]="{'is-invalid': Acercademi.errors && Acercademi.touched, 'is-valid': !Acercademi.errors && Acercademi.touched}"><!--[(ngModel)]="perso.acercademi"-->
+                <label for="exampleFormControlTextarea2" class="form-label">Segundo Texto</label>
+                <p *ngIf="Acercademi.hasError('required')" class="text-danger">
+                  El texto es requerido.
+                </p>
+                <p *ngIf="Acercademi.errors" class="text-danger">
+                  El texto debe ser valido.
+                </p>
+              </textarea>
+            </div>
+
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

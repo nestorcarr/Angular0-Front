@@ -1,0 +1,39 @@
+
+    <section>
+      <div id="proyecto" class="1">
+          <div class="container-fluid border rounded-3">
+            <h2>{{ proyectoss }}</h2>
+            <br>
+              <div *ngFor="let proyec of proyectos" class="row mt-4">
+                  <div class="col-4 pos_izq blockquote1">
+                      <div class="pb-3">
+                          <img src="{{ proyec.logoproyecto }}" class="tam_imag" alt="..." title="Logo Argentina Programa">
+                      </div>
+                      <h3>{{ proyec.proyect }}</h3>
+                      <h6></h6>
+                      <p>
+                          {{ proyec.anio }} 
+                      </p>
+                  </div>
+                  <div class="col-1">
+
+                  </div>
+                  
+                  <div class="col-7 col-md-6" >
+                      <figure class="mt-4 text-end">
+                          <blockquote class="blockquote blockquote1">
+                            <p>{{ proyec.tema }} 
+                            <br>
+                              {{ proyec.temauno }}
+                            </p>
+                          </blockquote>
+                          <figcaption class="blockquote-footer">
+                              Someone famous in <cite title="Source Title">Source Title</cite>
+                          </figcaption>
+                      </figure>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>

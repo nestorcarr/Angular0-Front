@@ -1,0 +1,171 @@
+<div *ngFor="let laboral of experiencialaboral" class="row mt-3">
+
+  <div class="col-4 pos_izq ps-4 pt-3">
+      <div>
+          <img [src]="laboral.logo" class="tam_imag2" alt="..." title="...">
+      </div>
+      <h3 class="mt-2">{{ laboral.empresa }}</h3>
+      <h5>{{ laboral.cargo }}</h5>
+      <h4>{{ laboral.inicio }}</h4>
+      <h4>{{ laboral.finalizacion }}</h4>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+      <figure class="mt-4">
+          <blockquote class="blockquote">
+              <p>{{ laboral.tareas}}</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Someone famous in <cite class="figcap" title="Source Title">Source Title</cite>
+          </figcaption>
+      </figure>
+      <!--<hr>-->
+
+  </div>
+  <!-- <div class="col-1 p-0 d-flex item-alling-end">
+    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal18" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
+    <button type="submit" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(laboral.id)"></i></button>
+  </div>
+  -->
+  <div class="row justify-content-center mt-3">
+    <div class="col-auto text-center">
+        <!--<ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+               <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon" (click)="actualizarVariable(laboral)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal8"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3" type="button" data-bs-toggle="modal" (click)="delete(laboral.id)"></i>
+            </li>
+        </ul>-->
+        <button type="button" (click)="actualizarVariable(laboral)" data-bs-toggle="modal" data-bs-target="#exampleModal8" class="btn btn-close-white" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
+        <button type="submit" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(laboral.id)"></i></button>
+    </div>
+  </div>
+  <hr class="ps-5 w-75">
+</div>
+<app-modaldashedicionlab [editarLaboral] = "laboral"></app-modaldashedicionlab>
+
+<!--
+<div class="row mt-3">
+
+  <div class="col-4 pos_izq ps-4 pt-3">
+      <div>
+          <img src="assets/image/logo Macreodent S.A..png" class="tam_imag2" alt="..." title="...">
+      </div>
+      <h2>Macrodent S.A.</h2>
+      <h5>Jefe de Compras</h5>
+      <p>
+          2002 - 2007
+      </p>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+
+
+      <figure class="mt-4 text-end">
+          <blockquote class="blockquote">
+              <p> ●	Desarrollo e implementación de objetivos y planes. ●	Programación de compras nacionales e internacionales, solicitud y análisis de cotizaciones, evaluación de proveedores, evaluación de laboratorios, control de stock mínimos vs planificación de producción, recepción de mercadería en tiempo y forma, cumplimiento en sistema de gestión. ●	Revisión del plan de compras al fin del periodo programado. Compras productivas y no productivas: máquinas, dispositivos y repuestos ( lectura y comprensión de planos), packaging, desarrollo del diseño del arte de los productos, insumos, etc.. ●	En la gestión se logro reducir los costos principalmente en lo que respecta al packaging en referencia al envasado y etiquetado, encontrando proveedores alternativos sin descuidar la calidad de los mismos. ●	Calidad y procedimientos I.S.O. 9001:2000 y Certificación CE. ●	Otras responsabilidades: Intendencia, Mantenimiento edilicio, seguimiento de contratistas, Comedor. ●	Presentación de Proyectos a organismos.</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Someone famous in <cite class="figcap" title="Source Title">Source Title</cite>
+          </figcaption>
+      </figure>
+      <hr>
+
+  </div>
+</div>
+<div class="row mt-3">
+
+  <div class="col-4 pos_izq ps-4 pt-3">
+      <div>
+          <img src="assets/image/Telecentro-logo.jpg" class="tam_imag2" alt="..." title="...">
+      </div>
+      <h2>Telecentro S.A.</h2>
+      <h5>Jefe de Instalaciones</h5>
+      <p>
+          1999 – 2001
+      </p>
+      <br>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+      <br>
+
+      <figure class="mt-4">
+          <blockquote class="blockquote">
+              <p> ●	 Coordinador de Capital Federal. ●  El plantel constaba  de aproximadamente 80 personas de las cuales 68 eran técnicos y 12 administrativos. ●	 Normas de Calidad y procedimientos. </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Someone famous in <cite class="figcap" title="Source Title">Source Title</cite>
+          </figcaption>
+      </figure>
+      <br>
+      <hr>
+
+  </div>
+</div>
+<div class="row mt-3">
+
+  <div class="col-4 pos_izq ps-4 pt-3">
+      <div>
+          <img src="assets/image/logo de Multicanal.png" class="tam_imag2" alt="..." title="...">
+      </div>
+      <h2>Multicanal S.A.</h2>
+      <h5>Jefe Técnico</h5>
+      <p>
+          1987 – 1998
+      </p>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+
+
+      <figure class="mt-4 text-end">
+          <blockquote class="blockquote">
+              <p> ●	Coordinador de los Partidos de Avellaneda, Lanus, Quilmes, Berazategui, Lomas de Zamora, Esteban Echeverría, Ezeiza, Almirante Brown, Presidente Perón y San Vicente. ●	  El plantel constaba de aproximadamente 300 personas de las cuales 250 eran técnicos y 50 administrativos. ●  Red, service, instalaciones, desconexiones, diseño, auditoria Gral. C.C.T.V. Fibra óptica. Normas de Calidad y procedimientos. </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Someone famous in <cite class="figcap" title="Source Title">Source Title</cite>
+          </figcaption>
+      </figure>
+      <hr>
+
+  </div>
+</div>
+<div class="row mt-3">
+<div class="col-4 pos_izq ps-4 pt-3">
+      <div>
+          <img src="assets/image/Logo CV.jpg" class="tam_imag2" alt="..." title="...">
+      </div>
+      <h2>Cablevisión S.A.</h2>
+      <h5>Técnico</h5>
+      <p>
+          1985 - 1987
+      </p>
+      <br>
+  </div>
+
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+      <br>
+      <br>
+
+      <figure class="mt-4 ps-5">
+          <blockquote class="blockquote">
+              <p> ●  Técnico de red y construcciones. </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Someone famous in <cite class="figcap" title="Source Title">Source Title</cite>
+          </figcaption>
+      </figure>
+      <br>
+      <br>
+      <br>
+
+  </div>
+</div>
+-->

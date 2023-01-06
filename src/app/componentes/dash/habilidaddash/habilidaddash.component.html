@@ -1,0 +1,42 @@
+<div *ngFor="let habilidad of habilidades" class="row progre mt-3 px-4">
+
+  <div class="col-3 my-3">
+      <h4>{{ habilidad.habilidad }}</h4>
+  </div>
+  <div class="col-12 col-sm-8 my-3">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" [ngStyle]="{'background-color': habilidad.color}" [style.width.%]="habilidad.porcentaje" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            {{ habilidad.porcentaje}}%
+        </div>
+      </div>
+  </div>
+  <div class="col-md-12 col-lg-1 p-0 d-flex item-alling-end">
+    <button type="button" (click)="actualizarVariable(habilidad)" data-bs-toggle="modal" data-bs-target="#exampleModal12" class="btn btn-close-white mx-auto" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
+    <button type="submit" class="btn btn-close-white mx-auto"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(habilidad.id)"></i></button>
+  </div>
+</div>
+<app-modaldashedicionhab [editarHabilidad] = "habilidad"></app-modaldashedicionhab> <!---->
+
+
+<!--Idioma
+<div class="container px-4">
+  <div class="row progres">
+      <div class="col-6 col-md mb-4">
+          <h4>{{ idiomas }} - {{ lecturas }}</h4>
+          <div class="progress">
+              <div class="progress-bar barco6a progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                  {{ porcentajelect }}%
+              </div>
+          </div>
+      </div>
+      <div class="col-6 col-md mb-4">
+          <h4>{{ idiomas }} - {{ conversacions }}</h4>
+          <div class="progress">
+              <div class="progress-bar barco6b progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                  {{ porcentajeconvers }}%
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+-->

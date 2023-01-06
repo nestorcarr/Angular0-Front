@@ -1,0 +1,53 @@
+<div *ngFor="let proyec of proyectos" class="row mt-3">
+  <div class="col-4 pos_izq ps-4 pt-5">
+      <div>
+          <a href="#">
+              <img src="{{ proyec.logoproyecto }}" class="tam_imag" alt="..." title="Logo Argentina Programa">
+          </a>
+      </div>
+      <p></p>
+  </div>
+
+  <div class="col-sm-12 col-md-8 justify-content-end" >
+      <figure class="mt-4">
+          <blockquote class="blockquote">
+              <h2>{{ proyec.institucion }}</h2>
+              <h4>{{ proyec.proyecto }}</h4>
+              <h5>{{ proyec.profesion }}</h5>
+                  <p> {{ proyec.anio }}  </p>
+                  <p>{{ proyec.tema }}
+                    <br>
+                      {{ proyec.temauno }}
+                    </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+              <cite class="figcap" title="Source Title">{{ proyec.estado }}</cite>
+          </figcaption>
+      </figure>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-auto text-center">
+        <div class="col-1 p-0 d-flex item-alling-end ">
+            <button type="button" (click)="actualizarVariable(proyec)" data-bs-toggle="modal" data-bs-target="#exampleModal14" class="btn btn-close-white text-white"><i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon"></i></button>
+            <button type="submit" class="btn btn-close-white" (click)="delete(proyec.id)"><i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3"></i></button>
+        </div>
+<!--
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+
+                    <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal14"></i>
+
+            </li>
+            <li class="list-group-item">
+
+                    <i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3" type="button" (click)="delete(proyectos.id)" data-bs-toggle="modal" data-bs-target="#exampleModal15"></i>
+
+            </li>
+        </ul>-->
+    </div>
+  </div>
+  <hr class="ps-5 w-75">
+</div>
+<app-modaldashedicionproy [editarProyecto] = "proyecto"></app-modaldashedicionproy>
+<!--<app-modaldashborrarproy></app-modaldashborrarproy>-->
+

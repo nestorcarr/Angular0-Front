@@ -1,0 +1,80 @@
+<div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel8" aria-hidden="true" *ngIf="traba">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel8">Modifique su Experiencia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+        </div>
+        <div class="modal-body letra">
+          <form [formGroup]="form" (ngSubmit)="onUpdate()" novalidate>
+            <div class="form-group">
+              <input type="text" class="form-control border" id="logo" placeholder="Logo" formControlName="logo" [(ngModel)]="traba.logo" [ngClass]="{'is-invalid': Logo.errors && Logo.touched, 'is-valid': !Logo.errors && Logo.touched}">
+              <label for="logo" class="form-label">Logo de la empresa</label>
+              <p class="help-block py-3"></p>
+              <!--<p *ngIf="Logo.hasError('required')" class="text-danger">
+                El logo es requerido.
+              </p>
+              <p *ngIf="Logo.errors" class="text-danger">
+                El logo debe ser valido.
+              </p>-->
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="empresa" placeholder="Empresa" formControlName="empresa" [(ngModel)]="traba.empresa" [ngClass]="{'is-invalid': Empresa.errors && Empresa.touched, 'is-valid': !Empresa.errors && Empresa.touched}">
+              <label for="empresa" class="form-label">Empresa</label>
+              <p *ngIf="Empresa.hasError('required')" class="text-danger">
+                La empresa es requerido.
+              </p>
+              <p *ngIf="Empresa.errors" class="text-danger">
+                La empresa debe ser valido.
+              </p>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="cargo" placeholder="Cargo" formControlName="cargo" [(ngModel)]="traba.cargo" [ngClass]="{'is-invalid': Cargo.errors && Cargo.touched, 'is-valid': !Cargo.errors && Cargo.touched}">
+              <label for="cargo" class="form-label">Cargo</label>
+              <p *ngIf="Cargo.hasError('required')" class="text-danger">
+                El cargo es requerido.
+              </p>
+              <p *ngIf="Cargo.errors" class="text-danger">
+                El cargo debe ser valido.
+              </p>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="inicio" placeholder="Año de Inicio" formControlName="inicio" [(ngModel)]="traba.inicio" [ngClass]="{'is-invalid': Inicio.errors && Inicio.touched, 'is-valid': !Inicio.errors && Inicio.touched}">
+              <label for="inicio" class="form-label">Año de Inicio</label>
+              <p *ngIf="Inicio.hasError('required')" class="text-danger">
+                El Inicio es requerido.
+              </p>
+              <p *ngIf="Inicio.errors" class="text-danger">
+                El Inicio debe ser valido.
+              </p>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="finalizacion" placeholder="Año de Finalización" formControlName="finalizacion" [(ngModel)]="traba.finalizacion" [ngClass]="{'is-invalid': Finalizacion.errors && Finalizacion.touched, 'is-valid': !Finalizacion.errors && Finalizacion.touched}">
+              <label for="finalizacion" class="form-label">Año de Finalización</label>
+              <p *ngIf="Finalizacion.hasError('required')" class="text-danger">
+                La finalizacion es requerido.
+              </p>
+              <p *ngIf="Finalizacion.errors" class="text-danger">
+                La finalizacion debe ser valido.
+              </p>
+            </div>
+
+            <div class="mb-3">
+              <textarea class="form-control border mb-2" id="tareas" rows="3" placeholder="Tareas Desempeñadas" formControlName="tareas" [(ngModel)]="traba.tareas" [ngClass]="{'is-invalid': Tareas.errors && Tareas.touched, 'is-valid': !Tareas.errors && Tareas.touched}"></textarea>
+              <label for="tareas" class="form-label"></label>
+              <p *ngIf="Tareas.hasError('required')" class="text-danger">
+                Las tareas es requerido.
+              </p>
+              <p *ngIf="Tareas.errors" class="text-danger">
+                Las tareas debe ser valido.
+              </p>
+            </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+          </form>
+      </div>
+    </div>
+</div>

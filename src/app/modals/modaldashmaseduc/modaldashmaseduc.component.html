@@ -1,0 +1,68 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal300" tabindex="-1" aria-labelledby="exampleModalLabel300" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel300">Agregue Nueva Educación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()">X</button>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm">
+      <div class="modal-body letra">
+          <div class="form-group">
+            <input type="text" formControlName="logo" class="form-control border mb-2" id="logo" placeholder="Logo" [(ngModel)]="logo" [ngClass]="{'is-invalid': Logo?.errors && Logo?.touched, 'is-valid': !Logo?.errors && Logo?.touched}">
+            <label for="logo" class="form-label">Logo de Institucion</label>
+            <p class="help-block py-3"></p>
+            <div *ngIf="Logo?.errors && Logo?.touched">
+              <p *ngIf="Logo?.hasError('required')" class="text-danger">
+                El Logo es requerido.
+              </p>
+            </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" formControlName="universidad" class="form-control border mb-2" id="universidad" placeholder="Universidad" [(ngModel)]="universidad" [ngClass]="{'is-invalid': Universidad?.errors && Universidad?.touched, 'is-valid': !Universidad?.errors && Universidad?.touched}">
+            <label for="universidad" class="form-label">Universidad</label>
+            <div *ngIf="Universidad?.errors && Universidad?.touched">
+              <p *ngIf="Universidad?.hasError('required')" class="text-danger">
+                La Universidad es requerida.
+              </p>
+            </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" formControlName="institucion" class="form-control border mb-2" id="institucion" placeholder="Institución" [(ngModel)]="institucion" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors && Institucion?.touched}">
+            <label for="institucion" class="form-label">Institución</label>
+            <div *ngIf="Institucion?.errors && Institucion?.touched">
+              <p *ngIf="Institucion?.hasError('required')" class="text-danger">
+                La institucion es requerida.
+              </p>
+            </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" formControlName="titulo" class="form-control border" id="titulo" placeholder="Título" [(ngModel)]="titulo" [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
+            <label for="titulo" class="form-label">Título</label>
+            <div *ngIf="Titulo?.errors && Titulo?.touched">
+              <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+                El titulo es requerido.
+              </p>
+            </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" formControlName="estado" class="form-control border" id="estado" placeholder="Estado" [(ngModel)]="estado" [ngClass]="{'is-invalid': Estado?.errors && Estado?.touched, 'is-valid': !Estado?.errors && Estado?.touched}">
+            <label for="estado" class="form-label">Estado</label>
+            <div *ngIf="Estado?.errors && Estado?.touched">
+              <p *ngIf="Estado?.hasError('required')" class="text-danger">
+                El estado es requerido.
+              </p>
+            </div>
+
+          </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="limpiar()">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+      </div>
+    </form>
+    </div>
+  </div>
+</div>

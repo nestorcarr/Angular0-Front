@@ -1,0 +1,59 @@
+<!-- Modal -->
+<!--<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" *ngIf="bann">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Cambia tu foto</h1>
+        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+      </div>
+      <div class="modal-body">
+        <form role="form" (ngSubmit)="onUpdate()" novalidate>
+          <div class="form-group">
+            <label for="imageprincipal" class="form-label"></label>
+            <input type="url" class="form-control border" id="imageprincipal" placeholder="Imagen principal" formControlName="imageprincipal" name="imageprincipal" [(ngModel)]="bann.imageprincipal" [ngClass]="{'is-invalid': Imageprincipal && Imageprincipal, 'is-valid': !Imageprincipal && Imageprincipal}">
+
+            <p class="help-block py-3"></p>
+            <label for="ejemplo" class="form-label">ejemplo</label>
+            <input type="text" class="form-control border" id="ejemplo" placeholder="ejemplo" formControlName="imageprincipal" [(ngModel)]="bann.imageprincipal" name="ejemplo">
+          </div>
+
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="limpiar()">Cancelar</button>
+            <button type="button" class="btn btn-primary" (click)="onUpdate()">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>-->
+<div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" *ngIf="bann">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel">Cambia tu foto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body letra">
+        <form [formGroup]="form" (ngSubmit)="onUpdate()" novalidate>
+          <div class="form-group">
+            <input type="text" class="form-control border" id="imageprincipal" placeholder="Imageprincipal" formControlName="imageprincipal"  [ngClass]="{'is-invalid': Imageprincipal.errors && Imageprincipal.touched, 'is-valid': !Imageprincipal.errors && Imageprincipal.touched}"><!--[(ngModel)]="bann.imageprincipal"-->
+            <label for="imageprincipal" class="form-label">Imagen principal </label>
+            <p class="help-block py-3"></p>
+            <!--<p *ngIf="Logo.hasError('required')" class="text-danger">
+              El logo es requerido.
+            </p>
+            <p *ngIf="Logo.errors" class="text-danger">
+              El logo debe ser valido.
+            </p>-->
+          </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+        </form>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,36 @@
+<section>
+  <div id="laboral" class="about1">
+    <div class="container-fluid border rounded-3">
+      <h2>{{ labora }}</h2>
+      <br />
+      <div *ngFor="let laboral of experiencialaboral" class="row mt-4">
+        <div class="col-4 pos_izq blockquote1">
+          <div>
+            <img
+              src="{{ laboral.logoempresa }}"
+              class="tam_imag2"
+              alt="..."
+              title="..."
+            />
+          </div>
+          <h3>{{ laboral.empresa }}</h3>
+          <h6>{{ laboral.cargo }}</h6>
+          <p>{{ laboral.inicio }} - {{ laboral.final }}</p>
+        </div>
+        <div class="col-1"></div>
+
+        <div class="col-sm-12 col-lg-6 ps-5">
+          <figure class="mt-4 text-end">
+            <blockquote class="blockquote blockquote1">
+              <p>{{ laboral.tareas }}</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+        </div>
+        <hr class="ps-5 w-75" />
+      </div>
+    </div>
+  </div>
+</section>

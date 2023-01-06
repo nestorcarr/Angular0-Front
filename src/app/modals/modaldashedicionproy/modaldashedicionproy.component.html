@@ -1,0 +1,96 @@
+<div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel14" aria-hidden="true" *ngIf="proye">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel14">Modifique su Proyecto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" >X</button>
+        </div>
+        <div class="modal-body letra">
+
+          <form [formGroup]="form" (ngSubmit)="onUpdate()" novalidate>
+            <div class="form-group">
+              <label for="logoproyecto"class="form-label">Logo del Proyecto.</label>
+              <input type="text" id="logoproyecto" placeholder="Logoproyecto" formControlName="logoproyecto" [(ngModel)]="proye.logoproyecto" [ngClass]="{'is-invalid': Logoproyecto.errors && Logoproyecto.touched, 'is-valid': !Logoproyecto.errors && Logoproyecto.touched}">
+              <p class="help-block py-3"></p>
+            </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control border mb-2" id="institucion" placeholder="Institución" formControlName="institucion" [(ngModel)]="proye.institucion" [ngClass]="{'is-invalid': Institucion.errors && Institucion.touched, 'is-valid': !Institucion.errors && Institucion.touched}">
+                  <label for="institucion"class="form-label">Institución</label>
+                  <p *ngIf="Institucion.hasError('required')" class="text-danger">
+                    La institucion es requerida.
+                  </p>
+                  <p *ngIf="Institucion.errors" class="text-danger">
+                    La institucion debe ser valida.
+                  </p>
+                </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control border mb-2" id="proyecto" placeholder="Proyecto" formControlName="proyecto" [(ngModel)]="proye.proyecto" [ngClass]="{'is-invalid': Proyecto.errors && Proyecto.touched, 'is-valid': !Proyecto.errors && Proyecto.touched}">
+                  <label for="proyecto"class="form-label">Proyecto</label>
+                  <p *ngIf="Proyecto.hasError('required')" class="text-danger">
+                    El proyecto es requerido.
+                  </p>
+                  <p *ngIf="Proyecto.errors" class="text-danger">
+                    El proyecto debe ser valido.
+                  </p>
+                </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control border mb-2" id="profesion" placeholder="Profesion" formControlName="profesion" [(ngModel)]="proye.profesion" [ngClass]="{'is-invalid': Profesion.errors && Profesion.touched, 'is-valid': !Profesion.errors && Profesion.touched}">
+                  <label for="profesion"class="form-label">Profesion</label>
+                  <p *ngIf="Profesion.hasError('required')" class="text-danger">
+                    La profesion es requerida.
+                  </p>
+                  <p *ngIf="Profesion.errors" class="text-danger">
+                    La profesion debe ser valida.
+                  </p>
+                </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control border mb-2" id="anio" placeholder="Año" formControlName="anio" [(ngModel)]="proye.anio" [ngClass]="{'is-invalid': Anio.errors && Anio.touched, 'is-valid': !Anio.errors && Anio.touched}"><!-- -->
+                  <label for="anio"class="form-label">Año</label>
+                  <p *ngIf="Anio.hasError('required')" class="text-danger">
+                    El año es requerido.
+                  </p>
+                  <p *ngIf="Anio.errors" class="text-danger">
+                    El año debe ser valido.
+                  </p>
+                  </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control border mb-2" id="estado" placeholder="Estado" formControlName="estado" [(ngModel)]="proye.estado" [ngClass]="{'is-invalid': Estado.errors && Estado.touched, 'is-valid': !Estado.errors && Estado.touched}">
+                  <label for="estado"class="form-label">Estado</label>
+                  <p *ngIf="Estado.hasError('required')" class="text-danger">
+                    El estado es requerido.
+                  </p>
+                  <p *ngIf="Estado.errors" class="text-danger">
+                    El estado debe ser valido.
+                  </p>
+                </div>
+
+                <div class="mb-3">
+                  <textarea class="form-control border" id="tema" rows="3" placeholder="Tema" formControlName="tema" [(ngModel)]="proye.tema" [ngClass]="{'is-invalid': Tema.errors && Tema.touched, 'is-valid': !Tema.errors && Tema.touched}"></textarea>
+                  <label for="tema" class="form-label"></label>
+                  <p *ngIf="Tema.hasError('required')" class="text-danger">
+                    El tema es requerido.
+                  </p>
+                  <p *ngIf="Tema.errors" class="text-danger">
+                    El tema debe ser valido.
+                  </p>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control border" id="temauno" rows="3" placeholder="Tema " formControlName="temauno" [(ngModel)]="proye.temauno" [ngClass]="{'is-invalid': Temauno.errors && Temauno.touched, 'is-valid': !Temauno.errors && Temauno.touched}" ></textarea>
+                  <label for="temauno" class="form-label"></label>
+                  <p *ngIf="Temauno.hasError('required')" class="text-danger">
+                    El tema es requerido.
+                  </p>
+                  <p *ngIf="Temauno.errors" class="text-danger">
+                    El tema debe ser valido.
+                  </p>
+                </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cancelar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </div>
+          </form>
+      </div>
+      </div>
+    </div>
+</div>
