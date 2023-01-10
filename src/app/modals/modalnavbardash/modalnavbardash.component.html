@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"><!--Login--></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="limpiar()">
+                <button type="button" id="cerrarSesion1"  class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -22,7 +22,8 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" onclick="location.href='http://localhost:4200/index'" class="btn btn-primary" data-dismiss="modal" aria-label="Close" (click)="limpiar()">Cerrar sesion</button>
+                <!--<button type="button" onclick="location.href='http://localhost:4200/index'" class="btn btn-primary" data-dismiss="modal" aria-label="Close" (click)="limpiar()">Cerrar sesion</button>-->
+                <button type="button" id="cerrarSesion" class="btn btn-primary" data-dismiss="modal" aria-label="Close" (click)="close()" *ngIf="isLogged">Cerrar sesion</button>
             </div>
         </div>
     </div>

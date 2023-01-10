@@ -11,19 +11,20 @@ export class EducacionService {
   //url = "http://localhost:8080/educacion/";
   url = environment.URL + 'educacion/';
 
+
   constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<Educacion[]>{
-    return this.httpClient.get<Educacion[]>(`${this.url}ver`);//(this.url + 'ver')
-  }
 
+  public lista(): Observable<Educacion[]>{
+    return this.httpClient.get<Educacion[]>(this.url + 'ver');
+  }
   //prestar atencion las cambia a comillas '' decia que eran ´´
   public getById(id: number):Observable<Educacion>{
     return this.httpClient.get<Educacion>(this.url + `detail/${id}`);
   }
 
-  public save(Educacion: Educacion):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'new', Educacion);
+  public save(educacion: Educacion):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'new', educacion);
   }
 
   public editEducacion(id: number, Educacion: Educacion): Observable<any>{
@@ -34,8 +35,15 @@ export class EducacionService {
     return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }
 
-  public edit(Educacion: Educacion):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'update', Educacion);
+  public edit(educacion: Educacion):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'update', educacion);
   }
+  /*
+  public update(id: number, educacion: Educacion): Observable<any>{
+    return this.httpClient.put<any>(this.url + `update/${id}`, educacion);
+  }
+*/
+
+
 
 }

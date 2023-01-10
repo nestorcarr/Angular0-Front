@@ -65,10 +65,11 @@ export class HabilidaddashComponent implements OnInit {
       this.sHabilidad.delete(id).subscribe(
         bd =>{
         //alerta que la habilidad ha sido eliminada
-        alert("No se pudo eliminar la habilidad");
+        alert("Habilidad eliminada");
         this.cargarHabilidad();
     }, error =>{
-      alert("Habilidad eliminada");
+      alert("No se pudo eliminar la habilidad");
+     
       window.location.reload();
 
     })

@@ -1,8 +1,9 @@
 export class Habilidad {
-    id!: number;
+  id!: number;
   habilidad: string;
   porcentaje: number;
   color: string;
+
 
     constructor(habilidad: string, porcentaje: number, color: string) {
         this.habilidad = habilidad;

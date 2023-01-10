@@ -22,8 +22,8 @@ export class LaboralService {
     return this.httpClient.get<Laboral>(this.url + `detail/${id}`);
   }
 
-  public save(Laboral: Laboral):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'new', Laboral);
+  public save(laboral: Laboral):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'new', laboral);
   }
 
   public editLaboral(id: number, laboral: Laboral): Observable<any>{
@@ -34,8 +34,12 @@ export class LaboralService {
     return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }
 
-  public edit(Laboral: Laboral):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'update', Laboral);
+  public edit(laboral: Laboral):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'update', laboral);
   }
-
+/*
+  public update(id: number, laboral: Laboral): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, laboral);
+  }
+*/
 }

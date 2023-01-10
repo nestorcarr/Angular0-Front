@@ -22,21 +22,25 @@ export class HabilidadService {
     return this.httpClient.get<Habilidad>(this.url + `detail/${id}`);
   }
 
-  public save(Habilidad: Habilidad):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'new', Habilidad);
+  public save(habilidad: Habilidad):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'new', habilidad);
   }
 
-  public editHabilidad(id: number, Habilidad: Habilidad): Observable<any>{
-    return this.httpClient.put<any>(this.url + `editar/${id}`, Habilidad);
+  public editHabilidad(id: number, habilidad: Habilidad): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, habilidad);
   }
 
   public delete(id: number):Observable<any>{
     return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }
 
-  public edit(Habilidad: Habilidad):Observable<any>{
-    return this.httpClient.post<any>(this.url + 'update', Habilidad);
+  public edit(habilidad: Habilidad):Observable<any>{
+    return this.httpClient.post<any>(this.url + 'update', habilidad);
   }
-
+/*
+  public update(id: number, habilidad: Habilidad): Observable<any>{
+    return this.httpClient.put<any>(this.url + `editar/${id}`, habilidad);
+  }
+*/
 
 }

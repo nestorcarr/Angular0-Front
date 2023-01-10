@@ -9,7 +9,8 @@ import { BannerService } from './service/banner.service';
 import { EducacionService } from './service/educacion.service';
 import { GuardGuard } from './service/guard.guard';
 import { HabilidadService } from './service/habilidad.service';
-import { authInterceptorProviders, InterceptorService } from './service/interceptor.service';
+//import { authInterceptorProviders, InterceptorService } from './service/interceptor.service';
+import { InterceptorService } from './service/interceptor.service';
 import { LaboralService } from './service/laboral.service';
 import { PersonaService } from './service/persona.service';
 import { ProyectoService } from './service/proyecto.service';
@@ -119,7 +120,7 @@ import { ModaldashmasproyComponent } from './modals/modaldashmasproy/modaldashma
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [InfoService, AuthService, BannerService, EducacionService, GuardGuard, HabilidadService, authInterceptorProviders, LaboralService, InterceptorService, LaboralService, PersonaService, ProyectoService, TokenService ],
+  providers: [InfoService, AuthService, BannerService, EducacionService, GuardGuard, HabilidadService, LaboralService, InterceptorService, LaboralService, PersonaService, ProyectoService, TokenService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

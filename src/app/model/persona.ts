@@ -7,6 +7,7 @@ export class Persona {
     acercademi: string;
     imageprincipal: string;
 
+  
     constructor(nombre: string, apellido: string, profesion: string, acerca_de_mi: string, acercademi: string, imageprincipal: string) {
 
         this.nombre = nombre;

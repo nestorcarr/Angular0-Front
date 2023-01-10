@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./logiin.component.scss']
 })
 export class LogiinComponent implements OnInit {
-  isLogged = false;
+  /*isLogged = false;
   isLogginFail = false;
   loginUsuario!: LoginUsuario;
   nombreUsuario!: string;
@@ -19,7 +19,7 @@ export class LogiinComponent implements OnInit {
   roles: string[] = [];
   errMsj!: string;
 
-  constructor(private tokenService: TokenService, private authService: AutentificacionService, private router: Router) { }
+   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -31,11 +31,12 @@ export class LogiinComponent implements OnInit {
     }
   }
 
+
   onLogin(): void{
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.iniciarSesion(this.loginUsuario).subscribe(data =>{
+    this.authService.login(this.loginUsuario).subscribe(data =>{
 
-        
+
         this.isLogged = true;
         this.isLogginFail = false;
         this.tokenService.setToken(data.token);
@@ -55,6 +56,27 @@ export class LogiinComponent implements OnInit {
   onLogOut():void{
     this.tokenService.logOut();
     window.location.reload();
+  }*/
+  isLogged = false;
+
+  constructor(private router:Router, private tokenService: TokenService) { }
+
+  ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+    }else{
+      this.isLogged = false;
+    }
   }
 
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+
+  login(){
+    this.router.navigate(['/login'])
+  }
 }
+
+

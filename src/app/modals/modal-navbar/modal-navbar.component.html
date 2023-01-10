@@ -12,16 +12,16 @@
 
             <form [formGroup]="form" (ngSubmit)="onLogin()" novalidate><!---->
                 <div class="mb-3">
-                    <label for="nombreUsuario" class="form-label">Usuario</label>
-                    <input type="email" formControlName="nombreUsuario" [(ngModel)]="nombreUsuario" [class.border-success]="NombreUsuarioValid" [class.border-danger]="NombreUsuarioInvalid" class="form-control" id="nombreUsuario" aria-describedby="emailHelp">
+                    <label for="username" class="form-label">Usuario</label>
+                    <input type="email" formControlName="username" [(ngModel)]="username" [class.border-success]="UsernameValid" [class.border-danger]="UsernameInvalid" class="form-control" id="username" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">Nunca compartiremos tu usuario</div><!---->
                 </div>
                 <!--Gracias al getter que configuramos en el controlador-->
-                <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
-                  <p *ngIf="NombreUsuario?.hasError('required')" class="error">
+                <div *ngIf="Username?.errors && Username?.touched">
+                  <p *ngIf="Username?.hasError('required')" class="error">
                     El nombre de usuario es requerido.
                   </p>
-                  <p *ngIf="NombreUsuario?.hasError('nombreUsuario')" class="error">
+                  <p *ngIf="Username?.hasError('username')" class="error">
                     El nombre de usuario debe ser valido.
                   </p>
                 </div>
@@ -58,8 +58,9 @@
                     <label class="form-check-label" for="exampleCheck1">Aceptar</label>
                 </div>-->
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary" (click)="onLogin()" *ngIf="!isLogged">Iniciar sesion</button><!--(click)="onLogin()" *ngIf="!isLogged"-->
-                  <button type="submit" class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesion</button><!--(click)="onLogOut()" *ngIf="isLogged"-->
+                  <!--<button type="submit" class="btn btn-primary" (click)="onLogin()" *ngIf="!isLogged">Iniciar sesion</button>-->
+                  <button type="submit" id="cerrarModal666" class="btn btn-primary" (click)="onLogin()">Iniciar sesion</button><!--(click)="onLogin()" *ngIf="!isLogged"-->
+                  <!--<button type="submit" class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesion</button>(click)="onLogOut()" *ngIf="isLogged"-->
                 </div>
             </form>
             <div>
@@ -67,7 +68,7 @@
             </div>
             <!--Esto muestra el mail y el password debajo, luego borrar-->
             <div>
-              <p><strong>{{ form.value.nombreUsuario }}</strong>---<strong>{{ form.value.password }}</strong></p>
+              <p><strong>{{ form.value.username }}</strong>---<strong>{{ form.value.password }}</strong></p>
             </div>
 
               <!--<form>
